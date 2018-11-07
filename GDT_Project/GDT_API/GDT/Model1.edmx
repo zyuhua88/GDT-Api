@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GDT_databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="yhtable">
+          <Key>
+            <PropertyRef Name="y_id" />
+          </Key>
+          <Property Name="y_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="y_name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="y_createtime" Type="int" Nullable="false" />
+          <Property Name="y_body" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="y_area" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="y_type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="y_dengji" Type="int" Nullable="false" />
+          <Property Name="y_desc" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="y_img1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="y_endtime" Type="int" Nullable="false" />
+          <Property Name="y_usid" Type="int" Nullable="false" />
+          <Property Name="y_zguser" Type="int" Nullable="false" />
+          <Property Name="y_yaoqiu" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="y_headuser" Type="int" Nullable="false" />
+          <Property Name="y_headtype" Type="int" Nullable="false" />
+          <Property Name="y_zgdesc" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="y_zgtime" Type="int" Nullable="false" />
+          <Property Name="y_qrdesc" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="y_qrimg" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="y_status" Type="int" Nullable="false" />
+          <Property Name="y_qruser" Type="int" Nullable="false" />
+          <Property Name="y_qrtime" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GDT_databaseModelStoreContainer">
+          <EntitySet Name="yhtable" EntityType="Self.yhtable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GDT_databaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="yhtable">
+          <Key>
+            <PropertyRef Name="y_id" />
+          </Key>
+          <Property Name="y_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="y_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_createtime" Type="Int32" Nullable="false" />
+          <Property Name="y_body" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_area" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_dengji" Type="Int32" Nullable="false" />
+          <Property Name="y_desc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_img1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_endtime" Type="Int32" Nullable="false" />
+          <Property Name="y_usid" Type="Int32" Nullable="false" />
+          <Property Name="y_zguser" Type="Int32" Nullable="false" />
+          <Property Name="y_yaoqiu" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_headuser" Type="Int32" Nullable="false" />
+          <Property Name="y_headtype" Type="Int32" Nullable="false" />
+          <Property Name="y_zgdesc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_zgtime" Type="Int32" Nullable="false" />
+          <Property Name="y_qrdesc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_qrimg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y_status" Type="Int32" Nullable="false" />
+          <Property Name="y_qruser" Type="Int32" Nullable="false" />
+          <Property Name="y_qrtime" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GDT_databaseEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="yhtable" EntityType="Self.yhtable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GDT_databaseModelStoreContainer" CdmEntityContainer="GDT_databaseEntities4">
+          <EntitySetMapping Name="yhtable">
+            <EntityTypeMapping TypeName="GDT_databaseModel.yhtable">
+              <MappingFragment StoreEntitySet="yhtable">
+                <ScalarProperty Name="y_id" ColumnName="y_id" />
+                <ScalarProperty Name="y_name" ColumnName="y_name" />
+                <ScalarProperty Name="y_createtime" ColumnName="y_createtime" />
+                <ScalarProperty Name="y_body" ColumnName="y_body" />
+                <ScalarProperty Name="y_area" ColumnName="y_area" />
+                <ScalarProperty Name="y_type" ColumnName="y_type" />
+                <ScalarProperty Name="y_dengji" ColumnName="y_dengji" />
+                <ScalarProperty Name="y_desc" ColumnName="y_desc" />
+                <ScalarProperty Name="y_img1" ColumnName="y_img1" />
+                <ScalarProperty Name="y_endtime" ColumnName="y_endtime" />
+                <ScalarProperty Name="y_usid" ColumnName="y_usid" />
+                <ScalarProperty Name="y_zguser" ColumnName="y_zguser" />
+                <ScalarProperty Name="y_yaoqiu" ColumnName="y_yaoqiu" />
+                <ScalarProperty Name="y_headuser" ColumnName="y_headuser" />
+                <ScalarProperty Name="y_headtype" ColumnName="y_headtype" />
+                <ScalarProperty Name="y_zgdesc" ColumnName="y_zgdesc" />
+                <ScalarProperty Name="y_zgtime" ColumnName="y_zgtime" />
+                <ScalarProperty Name="y_qrdesc" ColumnName="y_qrdesc" />
+                <ScalarProperty Name="y_qrimg" ColumnName="y_qrimg" />
+                <ScalarProperty Name="y_status" ColumnName="y_status" />
+                <ScalarProperty Name="y_qruser" ColumnName="y_qruser" />
+                <ScalarProperty Name="y_qrtime" ColumnName="y_qrtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
